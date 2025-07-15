@@ -15,6 +15,25 @@ output "random_string" {
 }
 
 output "api_keys" {
-  value = "${var.api_keys}-bar"
+  value     = "${var.api_keys}-bar"
   sensitive = true
+}
+
+output "primary_region" {
+  value = var.regions[0]
+}
+
+output "multi-regions" {
+  value = var.region-set
+}
+output "primary_region_instances" {
+  value = var.region_instance_count["uksouth"]
+}
+
+output "vnet_name" {
+  value = var.vnet.vnet_name
+}
+
+output "subnet_name" {
+  value = var.vnet.subnet_name
 }
