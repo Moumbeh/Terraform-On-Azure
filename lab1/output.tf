@@ -20,14 +20,14 @@ output "api_keys" {
 }
 
 output "primary_region" {
-  value = var.regions[0]
+  value = var.regions[3]
 }
 
 output "multi-regions" {
   value = var.region-set
 }
 output "primary_region_instances" {
-  value = var.region_instance_count["uksouth"]
+  value = var.region_instance_count
 }
 
 output "vnet_name" {
@@ -36,4 +36,8 @@ output "vnet_name" {
 
 output "subnet_name" {
   value = var.vnet.subnet_name
+}
+
+output "ours" {
+  value = module.ours.random_string_id
 }

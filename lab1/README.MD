@@ -12,7 +12,7 @@
 ### variable collection types
 - list (list of string can have duplicates as they are identified by their index)
 - map (key value pair)
-- set (ordered list cant pick and choose from the strings as with list)
+- set (unordered list of unique string, terraform will dedupe any duplicates cant pick and choose from the strings as with list)
 - object (complex object that catches all types)
 
 ### input validation
@@ -46,3 +46,12 @@
 
 # Modules
 - its a logical grouping of resources package together as one component
+
+# terraform console
+- opens an interactive cli where you can evaluate expressions, inspect variables, test functions and read your state file
+- terraform console (opens the console in the currentg directory and load the configurations)
+- terraform console -workspace=dev (load state and variables for the given worspace)
+- terraform console -var-file="prod.tfvars"
+- {foo =1, bar = 2}["bar"] = (will result to 2 at the bottom)
+- var.application_name
+- random_string.prefix
