@@ -55,3 +55,7 @@
 - {foo =1, bar = 2}["bar"] = (will result to 2 at the bottom)
 - var.application_name
 - random_string.prefix
+
+# terraform commands
+- terraform show (use to provide human human readable output from a state or plan file)
+- terraform refresh (reconcile local state file with the real world statusof the resources Terraform already know)
