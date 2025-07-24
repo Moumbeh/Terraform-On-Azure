@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "bootcamp"
+  name     = "rg-${var.application_name}-${var.environment_name}"
   location = "uksouth"
 }
