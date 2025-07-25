@@ -1,4 +1,5 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-${var.application_name}-${var.environment_name}"
   location = "uksouth"
+  tags     = local.common_tags
 }
